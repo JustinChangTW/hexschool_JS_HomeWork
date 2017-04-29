@@ -1,0 +1,140 @@
+body{
+	font-family: Microsoft JhengHei;
+}
+
+.topbar{
+	height:100％;
+    overflow: hidden;
+    clip:rect(0px,50px,100px,0px);   //(上,右,下,左)  預設:上左為0，右下為圖的寬高
+}
+
+.messageBar{
+   position: relative ;  
+   top: -380px;
+   /*transform:translateY(-50%);*/
+   margin:auto;
+   /*transform:translateX(-50%);*/
+ /*  left: 20px; */
+   /*left: 30%; */
+  /*  margin-top: -300px; */
+  /* margin-left: -50px;  */
+}
+
+.messageBar h1{
+	color:#fff;
+	font-size:6em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;　//置中
+
+}
+
+.messageBar select{
+  background: rgba(255,255,255,0.4);
+  border:5px solid rgba(255,255,255,0.6) ;
+
+/*   margin-bottom: 5%; */
+  font-size: 200%;
+   text-align:center;　//置中
+} 
+
+.hot-class{
+/* 	width: 150%; */
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
+    min-width:100%;
+    min-width: 300px;
+    margin-top:70px;
+    margin-bottom: 50px;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+	/* border:1px solid #000; */
+	/* 	padding:5px 10px 10px 15px;
+	margin-left: -150px; */
+}
+
+.btns > .btn {
+	width:20%;
+	height:10%;
+	margin-left: 25px;
+}
+
+
+.clearfix {
+  overflow: auto;
+}
+
+
+.img{
+	height:200px;
+	overflow:hidden;
+}
+
+.img > img{
+	width:auto;
+	height:auto;
+}
+
+#btn_1{
+	background-color: #8286cc;
+}
+
+#btn_2{
+	background-color: #FFA782;
+}
+
+#btn_3{
+	background-color: #F5D005;
+}
+
+#btn_4{
+	background-color: #559AC8;
+}
+
+.icon_1{
+	color:#8286cc;
+}
+
+.icon_2{
+	color:#f5a623;
+}
+
+.icon_3{
+	color:#559ac8;
+}
+
+.rooms{
+   position: relative ;
+   top: -400px;
+   width:100%;
+}
+
+.caption{
+	position: relative ;
+}
+
+.pic_title {
+	 position: absolute;
+	 color:#fff;
+	 text-shadow:3px 3px 3px #000;
+	 top: -50%;
+	 width:100%;
+	 padding-left:10px;
+	 padding-right:30px;
+	 /*background-color: #0f0;*/
+}
+
+
+
+.pic_title > .name {
+	position: relative;
+
+	width:auto;
+	float:left;}
+
+.pic_title >.zone {
+	position: relative;
+	width:auto;
+	float:right; 
+}
