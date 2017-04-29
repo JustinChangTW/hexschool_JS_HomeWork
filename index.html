@@ -1,174 +1,70 @@
 <!DOCTYPE html>
 <html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		<title>Title Page</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div class="row">
-			    <div class="col-xs-12 col-sm-12">
-			    	<div class="img-responsive">
-						<img class="topbar img-responsive center-block" src="img/page-1-acknowledgement-2.png" alt="">
-					</div>	
-			    </div>
-			<div class="row messageBar">		
-			    <div class="col-xs-12 col-sm-3"></div>
-			    <div class="col-xs-12 col-sm-6">
-			    	<div class="center-block">
-						<h1>高雄旅遊資訊</h2>
-						<select name="select" id="select"  size="1" >
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="img-responsive">
+                    <img class="topbar img-responsive center-block" src="img/page-1-acknowledgement-2.png" alt="">
+                </div>
+            </div>
+            <div class="row messageBar">
+                <div class="col-xs-12 col-sm-3"></div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="center-block">
+                        <h1>高雄旅遊資訊</h2>
+                            <select name="select" id="select" size="1">
 							
 
 						</select>
-						<div class="hot-class img-rounded">
-							<h3>熱門行政區</h3>
-							<div class="btns">
-								<button class='btn btn-lg ' id='btn_1'>苓雅區</button>
-								<button class='btn btn-lg ' id='btn_2'>三民區</button>
-								<button class='btn btn-lg ' id='btn_3'>新興區</button>
-								<button class='btn btn-lg ' id='btn_4'>𥃆程區</button>
-							</div>
-						</div>
-						<input type="hidden" id="selecedtitem" name="" value="三民區" placeholder="">  
-					</div>
-				</div>
-			    </div>
-			    <div class="col-xs-12 col-sm-3"></div>
-			    <br>
-			    <div class="clearfix"></div>
-                
+                            <div class="hot-class img-rounded">
+                                <h3>熱門行政區</h3>
+                                <div class="btns">
+                                    <button class='btn btn-lg ' id='btn_1'>苓雅區</button>
+                                    <button class='btn btn-lg ' id='btn_2'>三民區</button>
+                                    <button class='btn btn-lg ' id='btn_3'>新興區</button>
+                                    <button class='btn btn-lg ' id='btn_4'>𥃆程區</button>
+                                </div>
+                            </div>
+                            <input type="hidden" id="selecedtitem" name="" value="三民區" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3"></div>
+            <br>
+            <div class="clearfix"></div>
+
+            <div class="container-fluid">
                 <div class="container-fluid">
-                	<div class="container-fluid">
-	                	<div class="row">
-	                		<div class="rooms">
-					        <!-- 旅遊地點   -->
-							
-						    <!-- 旅遊地點   -->
-							</div>
-	                	</div>
-                	</div">
+                    <div class="row">
+                        <div class="rooms">
+                            <!-- 旅遊地點   -->
+
+                            <!-- 旅遊地點   -->
+                        </div>
+                    </div>
+                    </div ">
                 </div>
 			</div>
 		</div>
 		
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery.js "></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js "></script>
 	</body>
 </html>
-<script type="text/javascript">
-
-    $.ajax({
-	  url: 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',
-	  //data: data,
-	  success: function(response){
-		var data = response.result.records;
-		var ddlist = document.querySelector("#select");
-		console.log(ddlist);
-        var ddlItem = new Option("　　　　　--------請選擇---------　　　　　",""); 
-        ddlist.options.add(ddlItem);
-	  	 $.each(data, function(i,item){
-		    // $("<img/>").attr("src", item.media.m).appendTo("#images");
-		    // if ( i == 3 ) return false;
-		    //console.log(item.Zone);
-		    var newddl = document.querySelector("option[value='"+item.Zone+"']");
-		    //console.log(newddl);
-            if(!newddl) {
-	  	       ddlItem = new Option(item.Zone,item.Zone); 
-               ddlist.options.add(ddlItem);
-            }
-		 });
-	  },
-	  dataType: 'json'
-	});
-
-	var chang = function(){
-	    $.ajax({
-			  url: 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',
-				//data: data,
-				success: function(response){
-				var data = response.result.records;
-				var selected ="";
-				//selected = document.querySelector("#selecedtitem").value;
-                selected = localStorage.getItem("selecedtitem");
-				var rooms = document.querySelector(".rooms");
-				console.log(selected);
-				var html="";
-				var htmltmp="";
-				for (var i = 0; i < data.length; i++) {
-					if(selected == data[i].Zone || data[i].Zone ) 
-					{
-					 	console.log(data[i].Zone)
-					 	var html =`
-					 	<div class="col-xs-12 col-sm-6">
-							<a href="#" class="thumbnail detail-data">
-							    <div class="img">
-									<img src="${data[i].Picture1}" alt="">
-								</div>
-								<div class="caption">
-									<h2 class='pic_title'>
-										<div class="name">${data[i].Name}</div> 
-										<div class="zone">${data[i].Zone}</div>
-									</h2>
-									<p>
-										<span class="glyphicon glyphicon-time icon_1" ></span>
-										<span>${data[i].Opentime}</span>
-									</p>
-									<p>
-										<span class="glyphicon glyphicon-map-marker icon_2" ></span>
-										<span>${data[i].Add}</span>
-									</p>
-									<p>
-										<span class="glyphicon glyphicon-phone-alt icon_3" ></span>
-										<span>${data[i].Tel}</span>
-									</p>
-								</div>
-							</a>
-						</div>
-						`
-						htmltmp +=html
-					}
-					rooms.innerHTML=htmltmp;
-                }
-			  },
-			  //dataType: json
-			});
-
-	}
-
-  	var ddl = document.querySelectorAll("#select");
-  	ddl[0].addEventListener('change', function(e){
-  		    console.log("1----------------------------");
-			console.log(e);
-			console.log("2----------------------------");
-			console.log(e.currentTarget.value);
-			document.querySelector("#selecedtitem").value = e.currentTarget.value;
-			localStorage.setItem("selecedtitem", e.currentTarget.value);
-			chang()	
-  	    }
-  		, false)
-
-
-    //綁定btn
-    var btn = document.querySelectorAll(".btn");
-    //console.log(btn);
-    for (var i = 0; i < btn.length; i++) {
-    	btn[i].addEventListener("click", function(e){
-			console.log(e);
-			console.log("----------------------------");
-			console.log(e.srcElement.innerHTML);
-			document.querySelector("#selecedtitem").value = e.srcElement.innerHTML;
-			localStorage.setItem("selecedtitem", e.srcElement.innerHTML);
-			chang()	
-    	});
-    }
-	chang()		
-</script>
+<script src="js/query.js "></script>
