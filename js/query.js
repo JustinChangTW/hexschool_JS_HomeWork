@@ -21,7 +21,7 @@ $.ajax({
     },
     dataType: 'json'
 });
-
+ 
 var chang = function() {
     $.ajax({
         url: 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',
@@ -36,7 +36,7 @@ var chang = function() {
             var html = "";
             var htmltmp = "";
             for (var i = 0; i < data.length; i++) {
-                if (selected == data[i].Zone || data[i].Zone) {
+                if (selected == data[i].Zone && data[i].Zone) {
                     console.log(data[i].Zone)
                     var html = `
 					 	<div class="col-xs-12 col-sm-6">
@@ -58,8 +58,15 @@ var chang = function() {
 										<span>${data[i].Add}</span>
 									</p>
 									<p>
-										<span class="glyphicon glyphicon-phone-alt icon_3" ></span>
-										<span>${data[i].Tel}</span>
+                                        <div class="phone">
+                                            <span class="glyphicon glyphicon-phone-alt icon_3" ></span>
+                                            <span>${data[i].Tel}</span>
+                                        </div>
+                                        <div class="welcom">
+                                            <span class="glyphicon glyphicon-tag icon_4"></span>
+                                            <span>免費參觀</span>
+                                        </div>
+                                        <div class="clear"></div>
 									</p>
 								</div>
 							</a>

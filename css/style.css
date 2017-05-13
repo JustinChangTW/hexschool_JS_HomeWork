@@ -100,13 +100,28 @@ body{
 	color:#f5a623;
 }
 
+.clear{
+	clear : both;
+}
+.phone{
+	display: inline-block;
+	float:left;
+}
+.welcom{
+	display: inline-block;
+	float:right;
+}
+
 .icon_3{
 	color:#559ac8;
+}
+.icon_4{
+	color:#F5DD05;
 }
 
 .rooms{
    position: relative ;
-   top: -400px;
+   top: -380px;
    width:100%;
 }
 
@@ -129,12 +144,31 @@ body{
 
 .pic_title > .name {
 	position: relative;
-
 	width:auto;
-	float:left;}
+	float:left;
+}
+
 
 .pic_title >.zone {
 	position: relative;
 	width:auto;
 	float:right; 
+}
+
+.line {
+	position: relative ;
+    top: -425px;
+    border-top-style:dashed;
+	border-width: 2px;
+	border-color: #C4D9E8;
+}
+.line_icon {
+	position: relative ;
+    top:-13px;
+    font-size: 30px;
+    -webkit-transform: rotate(90deg);
+    margin-left: 50%;
+    color:#C4D9E8;
+    background-color: #fff;
+    /*-webkit-transform: rotate(-90deg);*/
 }
